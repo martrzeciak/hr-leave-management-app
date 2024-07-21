@@ -1,11 +1,11 @@
 ﻿using HRLeaveManagement.Application.Contracts.Persistence;
-using HrLeaveManagementPersistence.DataContext;
-using HRLeaveManagementPersistence.Repositories;
-using Microsoft.EntityFrameworkCore;
+using HrLeaveManagement.Persistence.DataContext;
+using HRLeaveManagement.Persistence.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
-namespace HRLeaveManagementPersistence
+namespace HRLeaveManagement.Persistence
 {
     public static class PersistenceServiceRegistration
     {

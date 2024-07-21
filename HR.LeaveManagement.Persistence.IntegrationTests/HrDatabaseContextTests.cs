@@ -1,5 +1,5 @@
 ﻿using HRLeaveManagement.Domain;
-using HrLeaveManagementPersistence.DataContext;
+using HrLeaveManagement.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Shouldly;
 
@@ -20,13 +20,13 @@ namespace HR.LeaveManagement.Persistence.IntegrationTests
         [Fact]
         public async Task Save_SetDateCreatedValue()
         {
-            // Arrange
-            var leaveType = new LeaveType
-            {
-                Id = 1,
-                DefaultDays = 10,
-                Name = "Test Vacation"
-            };
+           // Arrange
+           var leaveType = new LeaveType
+           {
+               Id = 1,
+               DefaultDays = 10,
+               Name = "Test Vacation"
+           };
 
             // Act
             await _hrDatabaseContext.LeaveTypes.AddAsync(leaveType);
@@ -39,20 +39,20 @@ namespace HR.LeaveManagement.Persistence.IntegrationTests
         [Fact]
         public async Task Save_SetDateModifiedValue()
         {
-            // Arrange
-            var leaveType = new LeaveType
-            {
-                Id = 1,
-                DefaultDays = 10,
-                Name = "Test Vacation"
-            };
+           // Arrange
+           var leaveType = new LeaveType
+           {
+               Id = 1,
+               DefaultDays = 10,
+               Name = "Test Vacation"
+           };
 
-            // Act
-            await _hrDatabaseContext.LeaveTypes.AddAsync(leaveType);
-            await _hrDatabaseContext.SaveChangesAsync();
+           // Act
+           await _hrDatabaseContext.LeaveTypes.AddAsync(leaveType);
+           await _hrDatabaseContext.SaveChangesAsync();
 
-            // Assert
-            leaveType.DateModified.ShouldNotBeNull();
+           // Assert
+           leaveType.DateModified.ShouldNotBeNull();
         }
     }
 }

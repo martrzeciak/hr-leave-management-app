@@ -1,9 +1,8 @@
 ﻿using HRLeaveManagement.Domain;
 using HRLeaveManagement.Domain.Common;
-using HRLeaveManagementPersistence.Configurations;
 using Microsoft.EntityFrameworkCore;
 
-namespace HrLeaveManagementPersistence.DataContext
+namespace HrLeaveManagement.Persistence.DataContext
 {
     public class HrDatabaseContext : DbContext
     {

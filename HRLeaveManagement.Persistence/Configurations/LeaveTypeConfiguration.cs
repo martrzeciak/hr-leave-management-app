@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace HRLeaveManagementPersistence.Configurations
+namespace HRLeaveManagement.Persistence.Configurations
 {
     public class LeaveTypeConfiguration : IEntityTypeConfiguration<LeaveType>
     {
@@ -13,6 +13,14 @@ namespace HRLeaveManagementPersistence.Configurations
                     {
                         Id = 1,
                         Name = "Vacation",
+                        DefaultDays = 10,
+                        DateCreated = DateTime.UtcNow,
+                        DateModified = DateTime.UtcNow
+                    },
+                    new LeaveType
+                    {
+                        Id = 2,
+                        Name = "Vacation2",
                         DefaultDays = 10,
                         DateCreated = DateTime.UtcNow,
                         DateModified = DateTime.UtcNow

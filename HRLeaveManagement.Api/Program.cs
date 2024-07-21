@@ -2,7 +2,7 @@ using HR.LeaveManagement.Identity;
 using HRLeaveManagement.Api.Middleware;
 using HRLeaveManagement.Application;
 using HRLeaveManagement.Persistence;
-using HRLeaveManagementPersistence;
+using HRLeaveManagement.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

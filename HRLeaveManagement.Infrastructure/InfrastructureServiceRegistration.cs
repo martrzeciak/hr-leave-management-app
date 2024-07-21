@@ -6,7 +6,7 @@ using HRLeaveManagement.Infrastructure.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HRLeaveManagement.Persistence
+namespace HRLeaveManagement.Infrastructure
 {
     public static class InfrastructureServiceRegistration
     {

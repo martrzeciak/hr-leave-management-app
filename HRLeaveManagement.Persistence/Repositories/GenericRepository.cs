@@ -1,9 +1,9 @@
 ﻿using HRLeaveManagement.Application.Contracts.Persistence;
 using HRLeaveManagement.Domain.Common;
-using HrLeaveManagementPersistence.DataContext;
+using HrLeaveManagement.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
 
-namespace HRLeaveManagementPersistence.Repositories
+namespace HRLeaveManagement.Persistence.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
