@@ -10,6 +10,8 @@ namespace HRLeaveManagement.BlazorUI.Pages.LeaveTypes
         public NavigationManager NavigationManager { get; set; }
         [Inject]
         public ILeaveTypeService LeaveTypeService { get; set; }
+        [Inject]
+        public ILeaveAllocationService LeaveAllocationService { get; set; }
         public List<LeaveTypeVM> LeaveTypes { get; private set; }
         public string Message { get; set; } = string.Empty;
         

@@ -11,5 +11,21 @@ namespace HRLeaveManagement.BlazorUI.Services
         {
 
         }
+
+        public async Task<Response<Guid>> CreateLeaveAllocation(int leaveTypeId)
+        {
+            try
+            {
+                var response = new Response<Guid>();
+                CreateLeaveAllocationCommand createLeaveAllocationCommand = new() { LeaveTypeId = leaveTypeId };
+                await _client.LeaveAllocationsPOSTAsync(createLeaveAllocationCommand);
+
+                return response;
+            }
+            catch (ApiException ex)
+            {
+                return ConvertApiException<Guid>(ex);
+            }
+        }
     }
 }

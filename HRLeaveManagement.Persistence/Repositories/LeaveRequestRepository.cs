@@ -33,7 +33,6 @@ namespace HRLeaveManagement.Persistence.Repositories
             var leaveRequest = await _context.LeaveRequests
                 .Include(q => q.LeaveType)
                 .FirstOrDefaultAsync(q => q.Id == id);
-
             return leaveRequest;
         }
     }
